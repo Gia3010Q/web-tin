@@ -244,3 +244,4 @@ document.querySelectorAll('.destination-card img, .specialty-card img').forEach(
 });
 
 console.log('🎬 Advanced animations loaded');
+
