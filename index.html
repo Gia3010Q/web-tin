@@ -1,835 +1,141 @@
 <!DOCTYPE html>
-<html lang="vi" class="scroll-smooth">
-
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO Meta Tags -->
-    <title>Du Lịch Nghệ An - Khám Phá Vẻ Đẹp Xứ Nghệ</title>
-    <meta name="description"
-        content="Khám phá vẻ đẹp thiên nhiên, văn hóa và ẩm thực Nghệ An. Cửa Lò, Quê Bác, Pù Mát và những đặc sản lươn, cam Xã Đoài nổi tiếng.">
-    <meta name="keywords"
-        content="du lịch Nghệ An, Cửa Lò, Quê Bác, Pù Mát, đặc sản Nghệ An, lươn xứ Nghệ, cam Xã Đoài">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Du Lịch Nghệ An - Vẻ Đẹp Xứ Nghệ">
-    <meta property="og:description" content="Khám phá thiên nhiên hùng vĩ và ẩm thực đặc sắc của Nghệ An">
-    <meta property="og:type" content="website">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#059669',
-                        secondary: '#0ea5e9',
-                        accent: '#f59e0b',
-                    },
-                    fontFamily: {
-                        'heading': ['"Playfair Display"', 'serif'],
-                        'body': ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/custom.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website giới thiệu về tỉnh Nghệ An - quê hương anh hùng, đất võ trời văn">
+  <meta name="keywords" content="Nghệ An, đặc sản Nghệ An, du lịch Nghệ An, văn hóa Nghệ An">
+  <title>Nghệ An - Quê Hương Anh Hùng</title>
+  
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="font-body text-gray-800 bg-gray-50">
-
-    <!-- Navigation Bar -->
-    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <a href="#" class="text-2xl font-heading font-bold text-white hover:text-accent transition-colors">
-                    Nghệ An<span class="text-accent">.</span>
-                </a>
-
-                <!-- Desktop Menu -->
-                <ul class="hidden md:flex space-x-8 items-center">
-                    <li><a href="#home" class="nav-link text-white hover:text-accent transition-colors">Trang Chủ</a>
-                    </li>
-                    <li><a href="#about" class="nav-link text-white hover:text-accent transition-colors">Giới Thiệu</a>
-                    </li>
-                    <li><a href="#destinations" class="nav-link text-white hover:text-accent transition-colors">Điểm
-                            Đến</a></li>
-                    <li><a href="#specialties" class="nav-link text-white hover:text-accent transition-colors">Đặc
-                            Sản</a></li>
-                    <li><a href="#activities" class="nav-link text-white hover:text-accent transition-colors">Trải
-                            Nghiệm</a></li>
-                    <li><a href="#contact" class="nav-link text-white hover:text-accent transition-colors">Liên Hệ</a>
-                    </li>
-                </ul>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+<body>
+  
+  <!-- HEADER - Phần đầu trang -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo và tên website -->
+        <div class="logo">
+          <h1>🌾 Nghệ An</h1>
+          <p>Quê hương anh hùng - Đất võ trời văn</p>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 bg-opacity-95 backdrop-blur-lg">
-            <ul class="flex flex-col space-y-4 px-6 py-6">
-                <li><a href="#home" class="block text-white hover:text-accent transition-colors">Trang Chủ</a></li>
-                <li><a href="#about" class="block text-white hover:text-accent transition-colors">Giới Thiệu</a></li>
-                <li><a href="#destinations" class="block text-white hover:text-accent transition-colors">Điểm Đến</a>
-                </li>
-                <li><a href="#specialties" class="block text-white hover:text-accent transition-colors">Đặc Sản</a></li>
-                <li><a href="#activities" class="block text-white hover:text-accent transition-colors">Trải Nghiệm</a>
-                </li>
-                <li><a href="#contact" class="block text-white hover:text-accent transition-colors">Liên Hệ</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image with Parallax Effect -->
-        <div class="absolute inset-0 bg-cover bg-center bg-fixed"
-            style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
-        </div>
-
-        <!-- Hero Content -->
-        <div class="relative z-10 container mx-auto px-6 text-center text-white">
-            <h1 class="font-heading text-5xl md:text-7xl font-bold mb-6 animate-fade-in-down">
-                Về Với <span class="text-accent">Xứ Nghệ</span>
-            </h1>
-            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto animate-fade-in-up opacity-90">
-                Khám phá non nước hữu tình, văn hóa hào hùng và ẩm thực đậm đà tình quê
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-delay">
-                <a href="#destinations"
-                    class="btn-primary px-8 py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-full transition-all hover:scale-105 hover:shadow-xl">
-                    <i class="fas fa-compass mr-2"></i>Khám Phá Ngay
-                </a>
-                <a href="#specialties"
-                    class="btn-secondary px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-semibold rounded-full transition-all hover:scale-105">
-                    <i class="fas fa-utensils mr-2"></i>Đặc Sản Nghệ An
-                </a>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <i class="fas fa-chevron-down text-white text-3xl opacity-70"></i>
-        </div>
-    </section>
-
-    <!-- About/Introduction Section -->
-    <section id="about" class="py-20 md:py-32 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Xứ Nghệ - Đất Người Kiệt Địa
-                </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Nơi hội tụ của lịch sử hào hùng, thiên nhiên kỳ vĩ và con người chất phác, trung nghĩa
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="text-center p-8 rounded-2xl hover:shadow-2xl transition-shadow" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-landmark text-4xl text-primary"></i>
-                    </div>
-                    <h3 class="font-heading text-2xl font-semibold mb-4">Di Sản Văn Hóa</h3>
-                    <p class="text-gray-600">Quê hương Chủ tịch Hồ Chí Minh, nơi lưu giữ hàng ngàn năm văn hiến Việt Nam
-                    </p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="text-center p-8 rounded-2xl hover:shadow-2xl transition-shadow" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-secondary/10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-mountain text-4xl text-secondary"></i>
-                    </div>
-                    <h3 class="font-heading text-2xl font-semibold mb-4">Thiên Nhiên Kỳ Vĩ</h3>
-                    <p class="text-gray-600">Từ bãi biển Cửa Lò đến rừng nguyên sinh Pù Mát, vẻ đẹp đa dạng và hoang sơ
-                    </p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="text-center p-8 rounded-2xl hover:shadow-2xl transition-shadow" data-aos="fade-up"
-                    data-aos-delay="300">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-accent/10 rounded-full flex items-center justify-center">
-                        <i class="fas fa-bowl-food text-4xl text-accent"></i>
-                    </div>
-                    <h3 class="font-heading text-2xl font-semibold mb-4">Ẩm Thực Đặc Sắc</h3>
-                    <p class="text-gray-600">Vị cay nồng đặc trưng từ lươn, cam ngọt thanh Xã Đoài và tương Nam Đàn trứ
-                        danh</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tourist Destinations Section -->
-    <section id="destinations" class="py-20 md:py-32 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Điểm Đến Hấp Dẫn
-                </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Những địa danh không thể bỏ lỡ khi đến với Nghệ An
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Destination 1: Cửa Lò -->
-                <div class="destination-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop"
-                            alt="Bãi Biển Cửa Lò"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
-                            <i class="fas fa-star text-yellow-400 mr-1"></i>4.8
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Bãi
-                            Biển Cửa Lò</h3>
-                        <p class="text-gray-600 mb-4">Bãi biển trải dài với cát trắng mịn, sóng êm và hải sản tươi ngon.
-                            Thiên đường nghỉ dưỡng của miền Bắc.</p>
-                        <button onclick="openModal('cua-lo')"
-                            class="text-primary font-semibold hover:text-primary/80 transition-colors">
-                            Xem chi tiết <i class="fas fa-arrow-right ml-1"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Destination 2: Quê Bác -->
-                <div class="destination-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1599571234909-29ed5d1321d6?q=80&w=800&auto=format&fit=crop"
-                            alt="Quê Bác - Kim Liên"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
-                            <i class="fas fa-star text-yellow-400 mr-1"></i>5.0
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Quê
-                            Bác - Kim Liên</h3>
-                        <p class="text-gray-600 mb-4">Khu di tích lịch sử văn hóa đặc biệt quốc gia, nơi sinh ra và lớn
-                            lên của Chủ tịch Hồ Chí Minh.</p>
-                        <button onclick="openModal('que-bac')"
-                            class="text-primary font-semibold hover:text-primary/80 transition-colors">
-                            Xem chi tiết <i class="fas fa-arrow-right ml-1"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Destination 3: Pù Mát -->
-                <div class="destination-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=800&auto=format&fit=crop"
-                            alt="Vườn Quốc Gia Pù Mát"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
-                            <i class="fas fa-star text-yellow-400 mr-1"></i>4.9
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Vườn
-                            Quốc Gia Pù Mát</h3>
-                        <p class="text-gray-600 mb-4">Rừng nguyên sinh kỳ vĩ với hệ sinh thái đa dạng, thác Khe Kèm hùng
-                            vĩ và không khí trong lành.</p>
-                        <button onclick="openModal('pu-mat')"
-                            class="text-primary font-semibold hover:text-primary/80 transition-colors">
-                            Xem chi tiết <i class="fas fa-arrow-right ml-1"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Destination 4: Đảo Chè -->
-                <div class="destination-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1595183353597-2a5b161c56f6?q=80&w=800&auto=format&fit=crop"
-                            alt="Đảo Chè Thanh Chương"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
-                            <i class="fas fa-star text-yellow-400 mr-1"></i>4.7
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Đảo
-                            Chè Thanh Chương</h3>
-                        <p class="text-gray-600 mb-4">Khung cảnh thơ mộng với những đồi chè xanh ngát trải dài, lý tưởng
-                            cho du lịch sinh thái.</p>
-                        <button onclick="openModal('dao-che')"
-                            class="text-primary font-semibold hover:text-primary/80 transition-colors">
-                            Xem chi tiết <i class="fas fa-arrow-right ml-1"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Destination 5: Đền Cuông -->
-                <div class="destination-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop"
-                            alt="Đền Cuông"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
-                            <i class="fas fa-star text-yellow-400 mr-1"></i>4.6
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Đền
-                            Cuông</h3>
-                        <p class="text-gray-600 mb-4">Quần thể đền chiền linh thiêng, kiến trúc cổ kính mang đậm dấu ấn
-                            văn hóa tín ngưỡng Việt.</p>
-                        <button onclick="openModal('den-cuong')"
-                            class="text-primary font-semibold hover:text-primary/80 transition-colors">
-                            Xem chi tiết <i class="fas fa-arrow-right ml-1"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Destination 6: Làng Sen -->
-                <div class="destination-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=800&auto=format&fit=crop"
-                            alt="Làng Sen"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
-                            <i class="fas fa-star text-yellow-400 mr-1"></i>4.8
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Làng
-                            Sen - Quê Bác</h3>
-                        <p class="text-gray-600 mb-4">Không gian yên bình với ao sen và nhà lá, tái hiện tuổi thơ của
-                            người con ưu tú của dân tộc.</p>
-                        <button onclick="openModal('lang-sen')"
-                            class="text-primary font-semibold hover:text-primary/80 transition-colors">
-                            Xem chi tiết <i class="fas fa-arrow-right ml-1"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Specialties Section -->
-    <section id="specialties" class="py-20 md:py-32 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Đặc Sản Nghệ An
-                </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Hương vị đậm đà, mang đậm dấu ấn văn hóa xứ Nghệ
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Specialty 1 -->
-                <div class="specialty-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group"
-                    data-aos="zoom-in" data-aos-delay="100">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=600&auto=format&fit=crop"
-                            alt="Lươn Xứ Nghệ"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-xl font-bold mb-2">Lươn Xứ Nghệ</h3>
-                        <p class="text-gray-600 text-sm mb-3">Cháo lươn, lươn xào cay nồng - món ăn đặc trưng không thể
-                            bỏ qua</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-primary font-bold text-lg">45.000đ/bát</span>
-                            <button
-                                class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-full text-sm transition-all hover:scale-105">
-                                <i class="fas fa-shopping-cart mr-1"></i>Liên hệ
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Specialty 2 -->
-                <div class="specialty-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group"
-                    data-aos="zoom-in" data-aos-delay="200">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5a?q=80&w=600&auto=format&fit=crop"
-                            alt="Cam Xã Đoài"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-xl font-bold mb-2">Cam Xã Đoài</h3>
-                        <p class="text-gray-600 text-sm mb-3">Vỏ mỏng, vị ngọt thanh, là cam tiến vua nổi tiếng xứ Nghệ
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-primary font-bold text-lg">80.000đ/kg</span>
-                            <button
-                                class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-full text-sm transition-all hover:scale-105">
-                                <i class="fas fa-shopping-cart mr-1"></i>Liên hệ
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Specialty 3 -->
-                <div class="specialty-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group"
-                    data-aos="zoom-in" data-aos-delay="300">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=600&auto=format&fit=crop"
-                            alt="Tương Nam Đàn"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-xl font-bold mb-2">Tương Nam Đàn</h3>
-                        <p class="text-gray-600 text-sm mb-3">Đặc sản từ đậu nành và nếp cái hoa vàng, hương vị đậm đà
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-primary font-bold text-lg">35.000đ/chai</span>
-                            <button
-                                class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-full text-sm transition-all hover:scale-105">
-                                <i class="fas fa-shopping-cart mr-1"></i>Liên hệ
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Specialty 4 -->
-                <div class="specialty-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group"
-                    data-aos="zoom-in" data-aos-delay="400">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?q=80&w=600&auto=format&fit=crop"
-                            alt="Nhút Thanh Chương"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-xl font-bold mb-2">Nhút Thanh Chương</h3>
-                        <p class="text-gray-600 text-sm mb-3">Món ăn dân dã, thơm ngon - "Nhút Thanh Chương, tương Nam
-                            Đàn"</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-primary font-bold text-lg">30.000đ/hũ</span>
-                            <button
-                                class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-full text-sm transition-all hover:scale-105">
-                                <i class="fas fa-shopping-cart mr-1"></i>Liên hệ
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Activities/Experiences Section -->
-    <section id="activities" class="py-20 md:py-32 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Trải Nghiệm Khó Quên
-                </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Những hoạt động đặc sắc khi đến với Nghệ An
-                </p>
-            </div>
-
-            <!-- Timeline -->
-            <div class="max-w-4xl mx-auto">
-                <div class="space-y-12">
-                    <!-- Activity 1 -->
-                    <div class="flex flex-col md:flex-row gap-6 items-center" data-aos="fade-right">
-                        <div class="md:w-1/2 order-2 md:order-1">
-                            <div class="bg-white p-8 rounded-2xl shadow-lg">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-water text-primary text-xl"></i>
-                                    </div>
-                                    <h3 class="font-heading text-2xl font-bold">Du Lịch Biển</h3>
-                                </div>
-                                <p class="text-gray-600">Tắm biển, lướt sóng và thưởng thức hải sản tươi sống tại Cửa
-                                    Lò. Khám phá đảo Ngư và các làng chài truyền thống.</p>
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 order-1 md:order-2">
-                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=600&auto=format&fit=crop"
-                                alt="Du lịch biển" class="w-full h-64 object-cover rounded-2xl shadow-lg">
-                        </div>
-                    </div>
-
-                    <!-- Activity 2 -->
-                    <div class="flex flex-col md:flex-row gap-6 items-center" data-aos="fade-left">
-                        <div class="md:w-1/2">
-                            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=600&auto=format&fit=crop"
-                                alt="Khám phá rừng" class="w-full h-64 object-cover rounded-2xl shadow-lg">
-                        </div>
-                        <div class="md:w-1/2">
-                            <div class="bg-white p-8 rounded-2xl shadow-lg">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <div
-                                        class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-tree text-secondary text-xl"></i>
-                                    </div>
-                                    <h3 class="font-heading text-2xl font-bold">Sinh Thái Rừng</h3>
-                                </div>
-                                <p class="text-gray-600">Trekking Pù Mát, khám phá động vật hoang dã, thác nước hùng vĩ.
-                                    Trải nghiệm homestay giữa rừng núi.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Activity 3 -->
-                    <div class="flex flex-col md:flex-row gap-6 items-center" data-aos="fade-right">
-                        <div class="md:w-1/2 order-2 md:order-1">
-                            <div class="bg-white p-8 rounded-2xl shadow-lg">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-utensils text-accent text-xl"></i>
-                                    </div>
-                                    <h3 class="font-heading text-2xl font-bold">Tour Ẩm Thực</h3>
-                                </div>
-                                <p class="text-gray-600">Khám phá hương vị Nghệ An qua các món lươn, cam Xã Đoài, tương
-                                    Nam Đàn. Học nấu ăn với người dân địa phương.</p>
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 order-1 md:order-2">
-                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop"
-                                alt="Ẩm thực" class="w-full h-64 object-cover rounded-2xl shadow-lg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section id="map" class="py-20 md:py-32 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Vị Trí & Bản Đồ
-                </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Dễ dàng tìm đường đến các điểm đến hấp dẫn
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Map -->
-                <div class="md:col-span-2" data-aos="fade-right">
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg h-96">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d477270.9876543!2d104.8!3d19.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136f619ca0e81a9%3A0x3b5d6c3e5e3b7b7b!2zTmdoxqkgQW4sIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1234567890"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- Location List -->
-                <div class="space-y-4" data-aos="fade-left">
-                    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow cursor-pointer">
-                        <div class="flex items-start gap-4">
-                            <div
-                                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Bãi Biển Cửa Lò</h4>
-                                <p class="text-sm text-gray-600">Thị xã Cửa Lò, Nghệ An</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow cursor-pointer">
-                        <div class="flex items-start gap-4">
-                            <div
-                                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Quê Bác - Kim Liên</h4>
-                                <p class="text-sm text-gray-600">Nam Đàn, Nghệ An</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow cursor-pointer">
-                        <div class="flex items-start gap-4">
-                            <div
-                                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Vườn QG Pù Mát</h4>
-                                <p class="text-sm text-gray-600">Con Cuông, Nghệ An</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow cursor-pointer">
-                        <div class="flex items-start gap-4">
-                            <div
-                                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Đảo Chè Thanh Chương</h4>
-                                <p class="text-sm text-gray-600">Thanh Chương, Nghệ An</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 md:py-32 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Liên Hệ Với Chúng Tôi
-                </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Chúng tôi luôn sẵn sàng tư vấn và hỗ trợ chuyến đi của bạn
-                </p>
-            </div>
-
-            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
-                <!-- Contact Info -->
-                <div class="space-y-8" data-aos="fade-right">
-                    <div>
-                        <h3 class="font-heading text-2xl font-bold mb-6">Thông Tin Liên Hệ</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-map-marker-alt text-primary text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold mb-1">Địa chỉ</h4>
-                                    <p class="text-gray-600">123 Đường Quang Trung, TP. Vinh, Nghệ An</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-phone text-secondary text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold mb-1">Điện thoại</h4>
-                                    <p class="text-gray-600">+84 238 123 4567</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-envelope text-accent text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold mb-1">Email</h4>
-                                    <p class="text-gray-600">info@dulichnghean.vn</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Social Media -->
-                    <div>
-                        <h4 class="font-semibold mb-4">Kết nối với chúng tôi</h4>
-                        <div class="flex gap-4">
-                            <a href="#"
-                                class="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white transition-all hover:scale-110">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#"
-                                class="w-12 h-12 bg-pink-600 hover:bg-pink-700 rounded-full flex items-center justify-center text-white transition-all hover:scale-110">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#"
-                                class="w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center text-white transition-all hover:scale-110">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#"
-                                class="w-12 h-12 bg-blue-400 hover:bg-blue-500 rounded-full flex items-center justify-center text-white transition-all hover:scale-110">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div data-aos="fade-left">
-                    <form id="contact-form" class="space-y-6 bg-gray-50 p-8 rounded-2xl">
-                        <div>
-                            <label for="name" class="block text-sm font-semibold mb-2">Họ và tên</label>
-                            <input type="text" id="name" name="name" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                placeholder="Nguyễn Văn A">
-                        </div>
-
-                        <div>
-                            <label for="email" class="block text-sm font-semibold mb-2">Email</label>
-                            <input type="email" id="email" name="email" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                placeholder="email@example.com">
-                        </div>
-
-                        <div>
-                            <label for="phone" class="block text-sm font-semibold mb-2">Số điện thoại</label>
-                            <input type="tel" id="phone" name="phone"
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                placeholder="0912345678">
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-sm font-semibold mb-2">Lời nhắn</label>
-                            <textarea id="message" name="message" rows="4" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
-                                placeholder="Tôi muốn tư vấn về..."></textarea>
-                        </div>
-
-                        <button type="submit"
-                            class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-4 rounded-lg transition-all hover:scale-105 hover:shadow-xl">
-                            <i class="fas fa-paper-plane mr-2"></i>Gửi tin nhắn
-                        </button>
-                    </form>
-
-                    <div id="form-message" class="mt-4 p-4 rounded-lg hidden"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <!-- About -->
-                <div>
-                    <h3 class="font-heading text-2xl font-bold mb-4">
-                        Nghệ An<span class="text-accent">.</span>
-                    </h3>
-                    <p class="text-gray-400 mb-4">Khám phá vẻ đẹp thiên nhiên, văn hóa và ẩm thực đậm đà tình quê của xứ
-                        Nghệ.</p>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="font-semibold text-lg mb-4">Liên Kết</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#about" class="text-gray-400 hover:text-accent transition-colors">Giới thiệu</a>
-                        </li>
-                        <li><a href="#destinations" class="text-gray-400 hover:text-accent transition-colors">Điểm
-                                đến</a></li>
-                        <li><a href="#specialties" class="text-gray-400 hover:text-accent transition-colors">Đặc sản</a>
-                        </li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-accent transition-colors">Liên hệ</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Popular Destinations -->
-                <div>
-                    <h4 class="font-semibold text-lg mb-4">Điểm Đến Phổ Biến</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">Bãi biển Cửa Lò</a>
-                        </li>
-                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">Quê Bác</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">Pù Mát</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">Đảo Chè</a></li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter -->
-                <div>
-                    <h4 class="font-semibold text-lg mb-4">Nhận Tin Tức</h4>
-                    <p class="text-gray-400 text-sm mb-4">Đăng ký để nhận thông tin mới nhất về du lịch Nghệ An</p>
-                    <form class="flex gap-2">
-                        <input type="email" placeholder="Email của bạn"
-                            class="flex-1 px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:border-primary outline-none text-sm">
-                        <button type="submit"
-                            class="bg-primary hover:bg-primary/90 px-4 py-2 rounded-lg transition-colors">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Bottom Bar -->
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; 2026 Du Lịch Nghệ An. Website Demo - Mẫu Tin Học Lớp 12.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal for Destination Details -->
-    <div id="destination-modal"
-        class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
-            <div class="relative">
-                <button onclick="closeModal()"
-                    class="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors z-10">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
-                <div id="modal-content">
-                    <!-- Content will be injected by JavaScript -->
-                </div>
-            </div>
-        </div>
+        
+        <!-- Menu điều hướng -->
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Trang chủ</a></li>
+            <li><a href="specialties.html">Đặc sản</a></li>
+            <li><a href="tourism.html">Du lịch</a></li>
+            <li><a href="culture.html">Văn hóa</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Nút menu cho mobile -->
+        <button class="menu-toggle">☰</button>
+      </div>
     </div>
+  </header>
 
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- HERO SECTION - Banner chính -->
+  <section class="hero">
+    <div class="container">
+      <h2>Chào mừng đến với Nghệ An</h2>
+      <p>Khám phá vùng đất giàu truyền thống, văn hóa và lịch sử anh hùng</p>
+    </div>
+  </section>
 
-    <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
+  <!-- INTRO SECTION - Giới thiệu -->
+  <section class="intro">
+    <div class="container">
+      <h3>Về Nghệ An</h3>
+      <p>
+        Nghệ An là tỉnh có diện tích lớn nhất Việt Nam, nằm ở khu vực Bắc Trung Bộ. 
+        Đây là quê hương của Chủ tịch Hồ Chí Minh vĩ đại và nhiều anh hùng, danh nhân của dân tộc. 
+        Nghệ An không chỉ nổi tiếng với lịch sử hào hùng mà còn có thiên nhiên tươi đẹp, 
+        văn hóa đặc sắc và ẩm thực phong phú.
+      </p>
+      <p>
+        Website này được tạo ra với mục đích quảng bá những giá trị đặc sắc của Nghệ An, 
+        từ các đặc sản nổi tiếng đến các địa điểm du lịch hấp dẫn và nét văn hóa truyền thống.
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY - Thư viện ảnh tiêu biểu -->
+  <section class="gallery">
+    <div class="container">
+      <h3>Hình ảnh tiêu biểu</h3>
+      
+      <div class="gallery-grid">
+        <!-- Biển Cửa Lò -->
+        <div class="gallery-item">
+          <img src="images/home/cua_lo_beach.png" alt="Biển Cửa Lò - Nghệ An">
+          <div class="gallery-caption">Biển Cửa Lò</div>
+        </div>
+        
+        <!-- Kim Liên - Quê Bác -->
+        <div class="gallery-item">
+          <img src="images/home/kim_lien_village.png" alt="Kim Liên - Quê Bác Hồ">
+          <div class="gallery-caption">Kim Liên - Quê Bác</div>
+        </div>
+        
+        <!-- Vườn quốc gia Pù Mát -->
+        <div class="gallery-item">
+          <img src="images/home/pu_mat_forest.png" alt="Vườn quốc gia Pù Mát">
+          <div class="gallery-caption">Vườn quốc gia Pù Mát</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS - Liên kết nhanh -->
+  <section class="cards">
+    <div class="container">
+      <div class="cards-grid">
+        <!-- Card Đặc sản -->
+        <div class="card">
+          <img src="images/specialties/cam_vinh.png" alt="Đặc sản Nghệ An">
+          <div class="card-content">
+            <h4>🍊 Đặc sản Nghệ An</h4>
+            <p>Khám phá các món ăn và đặc sản nổi tiếng của Nghệ An như cam Vinh, cháo lươn, nhút Thanh Chương...</p>
+          </div>
+        </div>
+        
+        <!-- Card Du lịch -->
+        <div class="card">
+          <img src="images/tourism/thac_khe_kem.png" alt="Du lịch Nghệ An">
+          <div class="card-content">
+            <h4>🏖️ Điểm đến du lịch</h4>
+            <p>Tìm hiểu về các địa điểm du lịch nổi bật tại Nghệ An từ biển, núi đến di tích lịch sử.</p>
+          </div>
+        </div>
+        
+        <!-- Card Văn hóa -->
+        <div class="card">
+          <img src="images/culture/vi_giam.png" alt="Văn hóa Nghệ An">
+          <div class="card-content">
+            <h4>🎭 Văn hóa & Con người</h4>
+            <p>Tìm hiểu về nét văn hóa đặc sắc và con người Nghệ An cần cù, nghĩa tình.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER - Chân trang -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Website Nghệ An - Bài tập Tin học 12</p>
+      <p>Được tạo bởi học sinh lớp 12 - Kết nối tri thức với cuộc sống</p>
+      <p>Liên hệ: <a href="contact.html">Gửi tin nhắn</a></p>
+    </div>
+  </footer>
+
+  <!-- Link JavaScript -->
+  <script src="script.js"></script>
+  
 </body>
-
 </html>

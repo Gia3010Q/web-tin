@@ -1,165 +1,230 @@
-# Nghệ An Tourism Website
+# 🌾 Website Nghệ An - Bài tập Tin học 12
 
-## 🌟 Giới Thiệu
+> Website giới thiệu về tỉnh Nghệ An - Quê hương anh hùng, đất võ trời văn
 
-Website du lịch và đặc sản Nghệ An được thiết kế hoàn toàn bằng HTML5, TailwindCSS và JavaScript thuần. Website hiện đại, responsive và sẵn sàng deploy ngay lập tức.
-
-## 📁 Cấu Trúc Thư Mục
-
-```
-d:/Ai/web tin/
-├── index.html          # Trang chính
-├── css/
-│   └── custom.css      # CSS tùy chỉnh
-├── js/
-│   ├── main.js         # JavaScript chính
-│   └── animations.js   # Hiệu ứng động
-└── README.md           # File này
-```
-
-## ✨ Tính Năng
-
-### Các Section
-- ✅ **Hero Section**: Banner toàn màn hình với parallax
-- ✅ **Giới Thiệu**: Thông tin về Nghệ An với icons
-- ✅ **Điểm Đến**: 6 địa điểm du lịch nổi bật với modal chi tiết
-- ✅ **Đặc Sản**: Showcase các đặc sản địa phương
-- ✅ **Trải Nghiệm**: Timeline hoạt động du lịch
-- ✅ **Bản Đồ**: Google Maps tích hợp
-- ✅ **Liên Hệ**: Form liên hệ với validation
-- ✅ **Footer**: Đầy đủ links và newsletter
-
-### Tính Năng Kỹ Thuật
-- 📱 **100% Responsive**: Tối ưu cho mobile, tablet, desktop
-- 🎨 **Animations**: Smooth scroll, AOS, hover effects
-- ⚡ **Performance**: Fast loading, lazy image loading
-- 🔍 **SEO Optimized**: Meta tags, semantic HTML
-- ♿ **Accessible**: ARIA labels, keyboard navigation
-- 🌐 **Modern Stack**: Tailwind CSS 3.x, ES6+ JavaScript
-
-## 🚀 Chạy Local
-
-### Cách 1: Mở Trực Tiếp
-1. Mở file `index.html` bằng trình duyệt web
-2. Website sẽ chạy ngay lập tức
-
-### Cách 2: Dùng Live Server (Khuyến nghị)
-Nếu dùng VS Code:
-```bash
-# Cài extension Live Server
-# Right-click vào index.html → "Open with Live Server"
-```
-
-Hoặc dùng Python:
-```bash
-# Python 3
-cd "d:/Ai/web tin"
-python -m http.server 8000
-
-# Mở trình duyệt: http://localhost:8000
-```
-
-Hoặc dùng Node.js:
-```bash
-npx serve
-```
-
-## 📤 Deploy Lên Production
-
-### Option 1: Netlify (Khuyến nghị - Dễ nhất)
-1. Truy cập [netlify.com/drop](https://app.netlify.com/drop)
-2. Kéo thả **toàn bộ thư mục** `d:/Ai/web tin` vào
-3. Đợi 30 giây → Nhận link website
-
-**Hoặc dùng Netlify CLI:**
-```bash
-npm install -g netlify-cli
-netlify deploy --prod
-# Chọn thư mục: d:/Ai/web tin
-```
-
-### Option 2: Vercel
-```bash
-npm install -g vercel
-cd "d:/Ai/web tin"
-vercel --prod
-```
-
-### Option 3: GitHub Pages
-```bash
-# Tạo repo trên GitHub
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin <repo-url>
-git push -u origin main
-
-# Vào Settings → Pages → Deploy from branch: main
-```
-
-### Option 4: Firebase Hosting
-```bash
-npm install -g firebase-tools
-firebase login
-firebase init hosting
-firebase deploy
-```
-
-## 🎨 Tùy Chỉnh
-
-### Đổi Màu Sắc
-Sửa trong `index.html` (dòng 33-39):
-```javascript
-colors: {
-    primary: '#059669',    // Màu chính
-    secondary: '#0ea5e9',  // Màu phụ
-    accent: '#f59e0b',     // Màu nhấn
-}
-```
-
-### Thay Đổi Nội Dung
-- **Địa điểm**: Sửa HTML trong section `#destinations`
-- **Đặc sản**: Sửa HTML trong section `#specialties`
-- **Chi tiết modal**: Sửa object `destinationData` trong `js/main.js`
-
-### Thêm/Bớt Section
-- Copy cấu trúc section có sẵn
-- Thêm link vào navbar
-- Thêm `data-aos` attributes cho animation
-
-## 📝 Checklist Trước Khi Deploy
-
-- [ ] Kiểm tra tất cả links hoạt động
-- [ ] Test form liên hệ
-- [ ] Test responsive trên mobile
-- [ ] Thay ảnh placeholder (nếu cần)
-- [ ] Cập nhật thông tin liên hệ
-- [ ] Kiểm tra SEO meta tags
-- [ ] Test trên các trình duyệt khác nhau
-
-## 🛠️ Tech Stack
-
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| HTML5 | - | Cấu trúc |
-| Tailwind CSS | 3.x (CDN) | Styling |
-| JavaScript | ES6+ | Logic |
-| AOS | 2.3.1 | Scroll Animations |
-| Font Awesome | 6.4.0 | Icons |
-| Google Fonts | - | Typography |
-
-## 📞 Hỗ Trợ
-
-Nếu gặp vấn đề:
-1. Kiểm tra Console (F12) xem có lỗi không
-2. Đảm bảo có kết nối internet (CDN dependencies)
-3. Clear cache trình duyệt
-
-## 📄 License
-
-MIT License - Sử dụng tự do cho mục đích học tập và thương mại.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ---
 
-**Developed with ❤️ for Nghệ An Tourism**
+## 📖 Giới thiệu
+
+Website **Nghệ An** là bài tập thực hành môn Tin học 12 (Bài 18 - Thiết kế Website), với chủ đề "Kết nối tri thức với cuộc sống". Dự án giới thiệu về:
+
+- 🍊 **Đặc sản Nghệ An** - Cam Vinh, Cháo lươn, Nhút, Tương, Bánh mướt
+- 🏖️ **Du lịch** - Cửa Lò, Kim Liên, Pù Mát, Thác Khe Kèm
+- 🎭 **Văn hóa** - Dân ca Ví Giặm, Truyền thống hiếu học, Con người xứ Nghệ
+
+---
+
+## 🚀 Cách sử dụng
+
+### Yêu cầu hệ thống
+- Trình duyệt web bất kỳ (Chrome, Firefox, Edge, Safari...)
+- Không cần kết nối internet (chạy offline)
+
+### Hướng dẫn mở website
+
+1. Mở File Explorer
+2. Dẫn đến thư mục `nghe-an-website`
+3. Double-click vào file `index.html`
+4. Website sẽ tự động mở trên trình duyệt
+
+### Hoặc
+
+1. Mở trình duyệt
+2. Nhấn `Ctrl + O`
+3. Chọn file `index.html`
+4. Website sẽ hiển thị
+
+---
+
+## 📂 Cấu trúc dự án
+
+```
+nghe-an-website/
+│
+├── index.html              # Trang chủ
+├── specialties.html        # Trang đặc sản
+├── tourism.html            # Trang du lịch
+├── culture.html            # Trang văn hóa
+├── contact.html            # Trang liên hệ
+│
+├── style.css               # File CSS chính
+├── script.js               # File JavaScript
+│
+├── images/                 # Thư mục hình ảnh
+│   ├── home/               # Ảnh trang chủ (3 files)
+│   ├── specialties/        # Ảnh đặc sản (5 files)
+│   ├── tourism/            # Ảnh du lịch (1 file)
+│   └── culture/            # Ảnh văn hóa (1 file)
+│
+├── BAO_CAO_BAI_TAP.md      # Báo cáo chi tiết (nộp bài)
+└── README.md               # File hướng dẫn này
+```
+
+---
+
+## ✨ Tính năng
+
+### 🎨 Giao diện
+- ✅ Thiết kế hiện đại, đẹp mắt
+- ✅ Màu sắc hài hòa (xanh lá, cam, nâu)
+- ✅ Responsive design (desktop, tablet, mobile)
+- ✅ Animation & hover effects
+
+### ⚡ Chức năng
+- ✅ Navigation menu với active state
+- ✅ Smooth scrolling
+- ✅ Form validation (JavaScript)
+- ✅ Scroll to top button
+- ✅ Mobile hamburger menu
+
+### 📱 Responsive
+- ✅ Desktop (> 768px)
+- ✅ Tablet (768px)
+- ✅ Mobile (< 480px)
+
+---
+
+## 🛠️ Công nghệ sử dụng
+
+| Công nghệ | Phiên bản | Mục đích |
+|-----------|-----------|----------|
+| HTML5 | Latest | Cấu trúc website |
+| CSS3 | Latest | Định dạng, bố cục |
+| JavaScript | ES6+ | Tương tác, xử lý sự kiện |
+
+**Không sử dụng framework** - Code thuần HTML, CSS, JavaScript phù hợp với chương trình Tin học 12.
+
+---
+
+## 📄 Nội dung các trang
+
+### 1. Trang chủ (index.html)
+- Hero banner
+- Giới thiệu về Nghệ An
+- Gallery hình ảnh
+- Quick links
+
+### 2. Đặc sản (specialties.html)
+- 6 đặc sản nổi tiếng
+- Card layout
+- Mô tả chi tiết
+
+### 3. Du lịch (tourism.html)
+- 4 địa điểm du lịch
+- Alternating layout
+- Hình ảnh + mô tả
+
+### 4. Văn hóa (culture.html)
+- 3 đặc trưng văn hóa
+- Quote boxes
+- Nội dung phong phú
+
+### 5. Liên hệ (contact.html)
+- Form liên hệ
+- Validation
+- Thông tin liên hệ
+
+---
+
+## 🎓 Kiến thức áp dụng
+
+Bài tập này áp dụng các kiến thức Tin học 12:
+
+- [x] **HTML**: Semantic tags, Forms, Links
+- [x] **CSS**: Selectors, Flexbox, Grid, Media Queries
+- [x] **JavaScript**: DOM, Events, Validation
+- [x] **Thiết kế web**: UX/UI, Responsive, Colors
+- [x] **Kết nối cuộc sống**: Nội dung về quê hương
+
+---
+
+## 📊 Thống kê
+
+```
+Tổng số file:    17 files
+HTML:           ~500 lines
+CSS:            ~600 lines
+JavaScript:     ~200 lines
+Hình ảnh:        10 images
+File size:      ~5 MB
+```
+
+---
+
+## 📸 Screenshots
+
+> Để xem giao diện website, vui lòng mở file `index.html` trên trình duyệt.
+
+---
+
+## 📚 Tài liệu nộp bài
+
+Để nộp bài tập cho giáo viên, hãy chuẩn bị:
+
+1. **Thư mục dự án** (`nghe-an-website/`) - Nén thành ZIP nếu cần
+2. **Báo cáo** - File `BAO_CAO_BAI_TAP.md` (hoặc chuyển sang Word/PDF)
+3. **Screenshots** - Chụp ảnh màn hình các trang
+4. **Giải trình** - Trình bày về dự án trước lớp
+
+---
+
+## ✅ Checklist nộp bài
+
+- [x] Code hoàn chỉnh (HTML, CSS, JS)
+- [x] Hình ảnh đầy đủ
+- [x] Website chạy được
+- [x] Responsive design
+- [x] Báo cáo chi tiết
+- [ ] Screenshots (tự chụp)
+- [ ] Thông tin cá nhân (họ tên, lớp, trường)
+
+---
+
+## 🔧 Troubleshooting
+
+### Website không hiển thị hình ảnh?
+- Kiểm tra đường dẫn file `images/`
+- Đảm bảo không di chuyển file HTML ra khỏi thư mục
+
+### Menu không hoạt động trên mobile?
+- Kiểm tra file `script.js` có load đúng không
+- Mở Console (F12) để xem lỗi
+
+### Font chữ không đẹp?
+- Kiểm tra trình duyệt hỗ trợ CSS3
+- Dùng trình duyệt mới nhất
+
+---
+
+## 📞 Liên hệ
+
+**Dự án:** Website Nghệ An  
+**Môn học:** Tin học 12 - Bài 18  
+**Năm học:** 2025-2026
+
+---
+
+## 📜 License
+
+Dự án này được tạo ra cho mục đích giáo dục (Bài tập Tin học 12).  
+Bạn có thể tự do sử dụng, chỉnh sửa cho mục đích học tập.
+
+---
+
+## 🌟 Lời cảm ơn
+
+- Thầy/Cô giáo hướng dẫn môn Tin học
+- Sách giáo khoa Tin học 12
+- Bạn bè hỗ trợ
+
+---
+
+**🌾 Chúc bạn học tốt và đạt điểm cao! 🌾**
+
+---
+
+> Được tạo bởi học sinh lớp 12 - Kết nối tri thức với cuộc sống

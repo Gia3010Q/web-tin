@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Liên hệ với chúng tôi - Website Nghệ An">
+    <meta name="keywords" content="liên hệ Nghệ An, gửi tin nhắn, góp ý">
+    <title>Liên hệ - Nghệ An</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER - Phần đầu trang -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo và tên website -->
+                <div class="logo">
+                    <h1>🌾 Nghệ An</h1>
+                    <p>Quê hương anh hùng - Đất võ trời văn</p>
+                </div>
+
+                <!-- Menu điều hướng -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="specialties.html">Đặc sản</a></li>
+                        <li><a href="tourism.html">Du lịch</a></li>
+                        <li><a href="culture.html">Văn hóa</a></li>
+                        <li><a href="contact.html" class="active">Liên hệ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Nút menu cho mobile -->
+                <button class="menu-toggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE TITLE - Tiêu đề trang -->
+    <section class="page-title">
+        <div class="container">
+            <h1>📧 Liên hệ với chúng tôi</h1>
+            <p>Gửi tin nhắn, góp ý hoặc thắc mắc cho chúng tôi</p>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM - Form liên hệ -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+
+                <form id="contactForm">
+
+                    <!-- Họ tên -->
+                    <div class="form-group">
+                        <label for="name">Họ và tên <span style="color: red;">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="Nhập họ và tên của bạn" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email <span style="color: red;">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email của bạn" required>
+                    </div>
+
+                    <!-- Nội dung -->
+                    <div class="form-group">
+                        <label for="message">Nội dung góp ý <span style="color: red;">*</span></label>
+                        <textarea id="message" name="message" placeholder="Nhập nội dung bạn muốn gửi..."
+                            required></textarea>
+                    </div>
+
+                    <!-- Nút gửi -->
+                    <button type="submit" class="btn">📤 Gửi tin nhắn</button>
+
+                </form>
+
+                <!-- Thông tin liên hệ -->
+                <div class="contact-info">
+                    <h3>📍 Thông tin liên hệ</h3>
+                    <p><strong>Địa chỉ:</strong> Tỉnh Nghệ An - Việt Nam</p>
+                    <p><strong>Website:</strong> Bài tập Tin học 12</p>
+                    <p><strong>Dự án:</strong> Kết nối tri thức với cuộc sống</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER - Chân trang -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Website Nghệ An - Bài tập Tin học 12</p>
+            <p>Được tạo bởi học sinh lớp 12 - Kết nối tri thức với cuộc sống</p>
+            <p>Cảm ơn bạn đã ghé thăm website!</p>
+        </div>
+    </footer>
+
+    <!-- Link JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
