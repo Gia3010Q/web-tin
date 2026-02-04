@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Website giới thiệu về tỉnh Nghệ An - quê hương anh hùng, đất võ trời văn">
   <meta name="keywords" content="Nghệ An, đặc sản Nghệ An, du lịch Nghệ An, văn hóa Nghệ An">
   <title>Nghệ An - Quê Hương Anh Hùng</title>
-  
+
   <!-- Link CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
+
   <!-- HEADER - Phần đầu trang -->
   <header>
     <div class="container">
@@ -21,18 +23,18 @@
           <h1>🌾 Nghệ An</h1>
           <p>Quê hương anh hùng - Đất võ trời văn</p>
         </div>
-        
+
         <!-- Menu điều hướng -->
         <nav>
           <ul>
             <li><a href="index.html" class="active">Trang chủ</a></li>
-            <li><a href="specialties.html">Đặc sản</a></li>
-            <li><a href="tourism.html">Du lịch</a></li>
-            <li><a href="culture.html">Văn hóa</a></li>
-            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="dacsan.html">Đặc sản</a></li>
+            <li><a href="dulich.html">Du lịch</a></li>
+            <li><a href="vanhoa.html">Văn hóa</a></li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
           </ul>
         </nav>
-        
+
         <!-- Nút menu cho mobile -->
         <button class="menu-toggle">☰</button>
       </div>
@@ -52,15 +54,26 @@
     <div class="container">
       <h3>Về Nghệ An</h3>
       <p>
-        Nghệ An là tỉnh có diện tích lớn nhất Việt Nam, nằm ở khu vực Bắc Trung Bộ. 
-        Đây là quê hương của Chủ tịch Hồ Chí Minh vĩ đại và nhiều anh hùng, danh nhân của dân tộc. 
-        Nghệ An không chỉ nổi tiếng với lịch sử hào hùng mà còn có thiên nhiên tươi đẹp, 
+        Nghệ An là tỉnh có diện tích lớn nhất Việt Nam, nằm ở khu vực Bắc Trung Bộ.
+        Đây là quê hương của Chủ tịch Hồ Chí Minh vĩ đại và nhiều anh hùng, danh nhân của dân tộc.
+        Nghệ An không chỉ nổi tiếng với lịch sử hào hùng mà còn có thiên nhiên tươi đẹp,
         văn hóa đặc sắc và ẩm thực phong phú.
       </p>
       <p>
-        Website này được tạo ra với mục đích quảng bá những giá trị đặc sắc của Nghệ An, 
-        từ các đặc sản nổi tiếng đến các địa điểm du lịch hấp dẫn và nét văn hóa truyền thống.
+        Website này được tạo ra với mục đích quảng bá những giá trị đặc sắc của Nghệ An,
+        từ các đặc sản nổi tiếng đến các địa điểm du lịch hấp dẫn và nết văn hóa truyền thống.
       </p>
+
+
+      <!-- Video giới thiệu Nghệ An -->
+      <!-- Video giới thiệu Nghệ An -->
+      <div class="video-container">
+        <video width="100%" controls poster="images/home/cua_lo_beach.png">
+          <source src="video/video.mp4" type="video/mp4">
+          Trình duyệt của bạn không hỗ trợ thẻ video.
+        </video>
+        <p class="video-caption">Video giới thiệu về vẻ đẹp Nghệ An</p>
+      </div>
     </div>
   </section>
 
@@ -68,20 +81,20 @@
   <section class="gallery">
     <div class="container">
       <h3>Hình ảnh tiêu biểu</h3>
-      
+
       <div class="gallery-grid">
         <!-- Biển Cửa Lò -->
         <div class="gallery-item">
           <img src="images/home/cua_lo_beach.png" alt="Biển Cửa Lò - Nghệ An">
           <div class="gallery-caption">Biển Cửa Lò</div>
         </div>
-        
+
         <!-- Kim Liên - Quê Bác -->
         <div class="gallery-item">
           <img src="images/home/kim_lien_village.png" alt="Kim Liên - Quê Bác Hồ">
           <div class="gallery-caption">Kim Liên - Quê Bác</div>
         </div>
-        
+
         <!-- Vườn quốc gia Pù Mát -->
         <div class="gallery-item">
           <img src="images/home/pu_mat_forest.png" alt="Vườn quốc gia Pù Mát">
@@ -103,7 +116,7 @@
             <p>Khám phá các món ăn và đặc sản nổi tiếng của Nghệ An như cam Vinh, cháo lươn, nhút Thanh Chương...</p>
           </div>
         </div>
-        
+
         <!-- Card Du lịch -->
         <div class="card">
           <img src="images/tourism/thac_khe_kem.png" alt="Du lịch Nghệ An">
@@ -112,7 +125,7 @@
             <p>Tìm hiểu về các địa điểm du lịch nổi bật tại Nghệ An từ biển, núi đến di tích lịch sử.</p>
           </div>
         </div>
-        
+
         <!-- Card Văn hóa -->
         <div class="card">
           <img src="images/culture/vi_giam.png" alt="Văn hóa Nghệ An">
@@ -126,16 +139,11 @@
   </section>
 
   <!-- FOOTER - Chân trang -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Website Nghệ An - Bài tập Tin học 12</p>
-      <p>Được tạo bởi học sinh lớp 12 - Kết nối tri thức với cuộc sống</p>
-      <p>Liên hệ: <a href="contact.html">Gửi tin nhắn</a></p>
-    </div>
-  </footer>
+  <footer></footer>
 
   <!-- Link JavaScript -->
   <script src="script.js"></script>
-  
+
 </body>
+
 </html>

@@ -5,15 +5,24 @@
 
 /* CSS Variables - Định nghĩa màu sắc và kích thước */
 :root {
-  --primary-color: #2c7a3f;        /* Màu xanh lá chủ đạo */
-  --secondary-color: #ff8c42;      /* Màu cam (cam Vinh) */
-  --accent-color: #d4a373;         /* Màu nâu đất */
-  --text-color: #333;              /* Màu chữ chính */
-  --text-light: #666;              /* Màu chữ phụ */
-  --bg-color: #f9f9f9;             /* Màu nền */
-  --white: #ffffff;                /* Màu trắng */
-  --shadow: 0 2px 10px rgba(0,0,0,0.1);  /* Bóng đổ */
-  --transition: all 0.3s ease;     /* Hiệu ứng chuyển động */
+  --primary-color: #2c7a3f;
+  /* Màu xanh lá chủ đạo */
+  --secondary-color: #ff8c42;
+  /* Màu cam (cam Vinh) */
+  --accent-color: #d4a373;
+  /* Màu nâu đất */
+  --text-color: #333;
+  /* Màu chữ chính */
+  --text-light: #666;
+  /* Màu chữ phụ */
+  --bg-color: #f9f9f9;
+  /* Màu nền */
+  --white: #ffffff;
+  /* Màu trắng */
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Bóng đổ */
+  --transition: all 0.3s ease;
+  /* Hiệu ứng chuyển động */
 }
 
 /* Reset CSS cơ bản */
@@ -104,7 +113,7 @@ nav a.active {
    ================================ */
 .hero {
   background: linear-gradient(rgba(44, 122, 63, 0.7), rgba(31, 90, 45, 0.7)),
-              url('images/home/cua_lo_beach.png') center/cover;
+    url('images/home/cua_lo_beach.png') center/cover;
   color: var(--white);
   text-align: center;
   padding: 6rem 0;
@@ -114,14 +123,14 @@ nav a.active {
 .hero h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
   font-size: 1.3rem;
   max-width: 600px;
   margin: 0 auto;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* ================================
@@ -167,6 +176,64 @@ nav a.active {
   color: var(--text-light);
 }
 
+/* Video Container - Local Video Player */
+.video-container {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border: 4px solid #fff;
+}
+
+.video-caption {
+  margin-top: 1rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.video-placeholder h4 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.video-placeholder p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.youtube-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #FF0000, #CC0000);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.youtube-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+  background: linear-gradient(135deg, #CC0000, #990000);
+}
+
+.youtube-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* ================================
    GALLERY - Thư viện ảnh
    ================================ */
@@ -197,7 +264,7 @@ nav a.active {
 
 .gallery-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item img {
@@ -212,7 +279,7 @@ nav a.active {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
   color: var(--white);
   padding: 2rem 1rem 1rem;
   font-size: 1.1rem;
@@ -243,7 +310,7 @@ nav a.active {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
@@ -433,7 +500,7 @@ nav a.active {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .contact-info {
@@ -484,6 +551,17 @@ footer a:hover {
     gap: 1rem;
   }
 
+  /* Ẩn menu mặc định trên mobile */
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* Hiện menu khi không có class mobile-hidden */
+  nav:not(.mobile-hidden) {
+    display: block;
+  }
+
   nav ul {
     flex-direction: column;
     gap: 0.5rem;
@@ -492,10 +570,9 @@ footer a:hover {
 
   .menu-toggle {
     display: block;
-  }
-
-  nav.mobile-hidden {
-    display: none;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
   }
 
   .hero h2 {
@@ -553,10 +630,26 @@ footer a:hover {
   text-align: center;
 }
 
-.mb-1 { margin-bottom: 1rem; }
-.mb-2 { margin-bottom: 2rem; }
-.mb-3 { margin-bottom: 3rem; }
+.mb-1 {
+  margin-bottom: 1rem;
+}
 
-.mt-1 { margin-top: 1rem; }
-.mt-2 { margin-top: 2rem; }
-.mt-3 { margin-top: 3rem; }
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
