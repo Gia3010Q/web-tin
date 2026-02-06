@@ -11,28 +11,74 @@ document.addEventListener('DOMContentLoaded', function () {
   // ================================
   const footerElement = document.querySelector('footer');
   if (footerElement) {
-    // Nội dung footer mặc định (dùng khi chạy offline không fetch được file)
-    const defaultFooter = `
-      <div class="container">
-        <p>&copy; 2026 Website Quảng Bá Đặc Sản Và Du Lịch</p>
-        <p>Được tạo bởi <a href="thanhvien.html" style="color: blue; text-decoration: underline; font-weight: bold;">Tổ 3</a></p>
-        <p>Liên hệ: <a href="lienhe.html">Gửi tin nhắn</a></p>
-      </div>
+    // Nội dung footer được nhúng trực tiếp để hoạt động offline không lỗi CORS
+    const footerContent = `
+<div class="container">
+    <div class="footer-content">
+        <!-- Về chúng tôi -->
+        <div class="footer-section about">
+            <h3>🌾 Về Nghệ An</h3>
+            <p>Website giới thiệu về văn hóa, du lịch và đặc sản tỉnh Nghệ An - Quê hương Bác Hồ. Khám phá vẻ đẹp và bản sắc độc đáo của vùng đất địa linh nhân kiệt.</p>
+            <div class="socials">
+                <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Liên kết nhanh -->
+        <div class="footer-section links">
+            <h3>🔗 Liên kết nhanh</h3>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                <li><a href="dacsan.html"><i class="fa-solid fa-utensils"></i> Đặc sản</a></li>
+                <li><a href="dulich.html"><i class="fa-solid fa-map-location-dot"></i> Du lịch</a></li>
+                <li><a href="vanhoa.html"><i class="fa-solid fa-masks-theater"></i> Văn hóa</a></li>
+                <li><a href="thanhvien.html"><i class="fa-solid fa-users"></i> Thành viên</a></li>
+                <li><a href="lienhe.html"><i class="fa-solid fa-envelope"></i> Liên hệ</a></li>
+            </ul>
+        </div>
+
+        <!-- Liên hệ -->
+        <div class="footer-section contact">
+            <h3>📞 Liên hệ</h3>
+            <div class="contact-info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Nghệ An</p>
+            </div>
+            <div class="contact-info-item">
+                <i class="fa-solid fa-phone"></i>
+                <p>0987 654 321</p>
+            </div>
+            <div class="contact-info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <p>nghean.website@gmail.com</p>
+            </div>
+            <div class="contact-info-item">
+                <i class="fa-solid fa-clock"></i>
+                <p>Thứ 2 - Thứ 6: 8:00 - 17:00</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <div class="copyright">
+                    &copy; 2026 <strong>Website Quảng Bá Đặc Sản Và Du Lịch</strong> - Bài tập Tin học 12 - Kết nối tri thức với cuộc sống
+                </div>
+                <div class="team-credit">
+                    Được tạo bởi <a href="thanhvien.html" class="team-link">Tổ 3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     `;
 
-    // Thử tải từ file footer.html (chỉ hoạt động khi có server hoặc trình duyệt cho phép)
-    fetch('footer.html')
-      .then(response => {
-        if (response.ok) return response.text();
-        throw new Error('Không thể tải footer.html');
-      })
-      .then(html => {
-        footerElement.innerHTML = html;
-      })
-      .catch(error => {
-        console.warn('Sử dụng footer mặc định:', error.message);
-        footerElement.innerHTML = defaultFooter;
-      });
+    footerElement.innerHTML = footerContent;
   }
 
   // ================================

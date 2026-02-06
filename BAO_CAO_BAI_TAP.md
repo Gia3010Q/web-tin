@@ -47,11 +47,11 @@ Dự án bao gồm các thành phần chính sau:
 *   `vanhoa.html`: **Trang Văn hóa** - Giới thiệu về con người, Dân ca Ví Giặm, truyền thống hiếu học.
 *   `lienhe.html`: **Trang Liên hệ** - Form gửi tin nhắn góp ý và thông tin liên lạc.
 *   `thanhvien.html`: **Trang Thành viên** - Giới thiệu danh sách thành viên Tổ 3.
-*   `footer.html`: **File Chân trang** - Chứa thông tin bản quyền và liên kết, được tải động vào các trang khác.
+*   `footer.html`: **File Chân trang gốc** - File thiết kế gốc của chân trang (được đồng bộ vào script.js để chạy offline).
 
 #### 2. Các file tài nguyên
-*   `style.css`: File định dạng giao diện chung cho toàn bộ website. Sử dụng biến CSS (Variables) để quản lý màu sắc đồng bộ.
-*   `script.js`: File mã nguồn JavaScript xử lý tương tác (Menu mobile, hiệu ứng cuộn, tải footer...).
+*   `style.css`: File định dạng giao diện chung.
+*   `script.js`: File mã nguồn JavaScript xử lý tương tác (Menu, Footer nhúng, hiệu ứng cuộn...).
 *   `images/`: Thư mục chứa hình ảnh minh họa cho các bài viết.
 
 ---
@@ -59,11 +59,15 @@ Dự án bao gồm các thành phần chính sau:
 ### V. TÍNH NĂNG NỔI BẬT
 
 1.  **Giao diện Responsive:** Website hiển thị tốt trên cả máy tính, máy tính bảng và điện thoại di động. Menu tự động chuyển sang dạng "Hamburger" trên màn hình nhỏ.
-2.  **Chân trang đồng bộ (Dynamic Footer):** Sử dụng JavaScript để tải nội dung từ `footer.html`, giúp việc cập nhật thông tin bản quyền diễn ra nhanh chóng tại một nơi duy nhất.
-3.  **Hiệu ứng mượt mà:**
-    *   Smooth Scrolling: Cuộn trang mượt mà khi bấm vào các liên kết.
-    *   Hover Effects: Hiệu ứng phóng to, đổi màu khi di chuột vào hình ảnh hoặc nút bấm.
-4.  **Trang Thành viên chuyên biệt:** Có trang riêng giới thiệu đội ngũ thực hiện dự án (Tổ 3).
+2.  **Chân trang đồng bộ (Dynamic Footer):**
+    *   Nội dung chân trang được tách biệt và quản lý tập trung.
+    *   Sử dụng JavaScript để nhúng trực tiếp HTML vào các trang, giúp footer hiển thị ổn định ngay cả khi xem offline (không cần server).
+3.  **Tương tác & Liên kết:**
+    *   **Thư viện ảnh sống động:** Các hình ảnh tiêu biểu (Cửa Lò, Kim Liên, Pù Mát) được liên kết trực tiếp đến các trang web chính thức của địa danh, giúp người xem dễ dàng tìm hiểu thêm.
+    *   **Điều hướng thông minh:** Các thẻ thông tin (Đặc sản, Du lịch, Văn hóa) có thể nhấp chuột để chuyển nhanh đến trang chi tiết.
+    *   **Smooth Scrolling:** Cuộn trang mượt mà.
+    *   **Hover Effects:** Hiệu ứng tương tác sinh động.
+4.  **Trang Thành viên chuyên biệt:** Giới thiệu đội ngũ thực hiện dự án.
 
 ---
 
